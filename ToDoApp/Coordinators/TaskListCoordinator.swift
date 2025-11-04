@@ -22,7 +22,7 @@ final class TaskListCoordinator: TaskListCoordinatorProtocol {
     
     func start() {
         let viewModel = TaskListViewModel(coordonator: self)
-        let viewController = ToDoHomeVC()
+        let viewController = TaskListViewController(viewModel: viewModel)
         
         navigationController.navigationBar.prefersLargeTitles = true
         viewController.title = "My Tasks"
